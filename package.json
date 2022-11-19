@@ -1,0 +1,22 @@
+{
+  "name": "chat_app",
+  "version": "1.0.0",
+  "description": "Chat réalisé avec socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/WendyAfrim/chat_app.git)"
+  },
+  "keywords": [
+    "chat",
+    "socket",
+    "socket.io",
+    "node",
+    "nodejs"
+  ],
+  "author": "Wendy",
+  "license": "ISC"
+}
