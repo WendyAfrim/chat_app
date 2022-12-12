@@ -1,7 +1,7 @@
 import { Server } from "socket.io"
 
 // On instancie socket.io 
-const io = new Server(9000, {
+const io = new Server(3000, {
     cors: {
         origin: "http://localhost:8000",
     }
