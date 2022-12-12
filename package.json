@@ -4,7 +4,8 @@
   "description": "Chat réalisé avec socket.io",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:socket": "nodemon sources/socket/index.js",
+    "start:client": "vite"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,8 @@
   "license": "ISC",
   "dependencies": {
     "expres": "^0.0.5",
-    "socket.io": "^4.5.3"
+    "socket.io": "^4.5.3",
+    "vite": "^4.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

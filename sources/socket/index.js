@@ -1,16 +1,11 @@
-// On instancie express
-const app = require('express')();
-
-// On crée le server http 
-const http = require('http').createServer(app);
+import { Server } from "socket.io"
 
 // On instancie socket.io 
-const io = require('socket.io')(http);
-
-// On crée la route 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + "/index.html");
-})
+const io = new Server(9000, {
+    cors: {
+        origin: "http://localhost:8000",
+    }
+});
 
 // On écoute l'évenement "connection" de socket.io
 io.on('connection', (socket) => {
@@ -26,8 +21,3 @@ io.on('connection', (socket) => {
        io.emit('chat_message', msg);
     })
 });
-
-// On va demander au server http de répondre sur le port 3000
-http.listen(3000, () => {
-    console.log('J\'ecoute le port 3000');
-})
