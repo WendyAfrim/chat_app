@@ -10,9 +10,13 @@ const http2 = http.createServer(app);
 const port = 8000;
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname +'/index.html');
-});
+app.use('/', express.static(__dirname + '/home' ));
+
+app.use('/chat', express.static(__dirname + '/chat' ));
+
+// app.get('/', (req, res) => {
+//     res.sendFile(__dirname +'/index.html');
+// });
 
 app.get('/admin', (req, res) => {
     res.sendFile(__dirname +'/admin/admin.html');

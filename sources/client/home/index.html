@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - Moto</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80');
+        }
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20em auto;
+        } 
+
+        .wrapper p {
+            margin-top: 2em;
+            text-align: center;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+    <body>
+        <div class="wrapper">
+            <button class="btn btn-light js-chat-target-counseler">Je souhaite parler à un conseiller de vente</button>
+            <p class="hide js-chat-closed-display">Notre chat est malheureusement fermé. <br> Nos horaires d'ouvertures sont de 9h à 18h ! Nos conseillers seront ravis de répondre à vos questions dès l'ouverture. :)</p>
+        </div>
+        <script src="./index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+</html>
