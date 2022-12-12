@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:socket": "nodemon sources/socket/index.js",
-    "start:client": "vite"
+    "start:client": "nodemon sources/client/router.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "license": "ISC",
   "dependencies": {
     "expres": "^0.0.5",
+    "express": "^4.18.2",
     "socket.io": "^4.5.3",
     "socket.io-client": "^4.5.3",
     "vite": "^4.0.0"
