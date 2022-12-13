@@ -18,7 +18,7 @@ let counseler = () => {
         const d = new Date();
         let hour = d.getHours();
 
-        if(hour > 9 && hour < 15) {
+        if(hour >= 9 && hour < 15) {
             return true;
         }
 
