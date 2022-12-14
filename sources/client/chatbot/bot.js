@@ -44,8 +44,10 @@
             "je voudrais avoir des informations sur les véhicule",
             "je voudrais avoir des informations sur les moto",
         ],
-        "Regex": [ /(.*)informations(.*)/,
-                    /(.*)info(.*)/,
+        "Regex": [ /(.*)informations(.*)moto(.*)/,
+                     /(.*)informations(.*)véhicule(.*)/,
+                    /(.*)info(.*)moto/,
+                    /(.*)info(.*)véhicule/,
                 ]
     }
 
@@ -77,8 +79,11 @@
             "je voudrais quitter la discussion",
         ],
         "Regex": [ /(.*)arreter(.*)/,
+                    /(.*)arrêter(.*)/,
                     /(.*)quitter(.*)/,
                     /(.*)stop(.*)/,
+                    /(.*)fin(.*)/,
+                    
                 ]
     }
 
@@ -91,7 +96,6 @@
 
             for (let j = 0; j < intentList[i].Regex.length; j++) {
                 if (intentList[i].Regex[j].test(msgLower)) {
-                    console.log("Regex");
                     intent = intentList[i];
                     return intent;
                 }
@@ -100,7 +104,6 @@
             if (intent == null) {
                 for (let j = 0; j < intentList[i].Sentences.length; j++) {
                     if (msgLower == intentList[i].Sentences[j]) {
-                        console.log("Sentence");
                         intent = intentList[i];
                         return intent;
                     }
