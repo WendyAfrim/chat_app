@@ -16,6 +16,8 @@ app.use('/chat', express.static(__dirname + '/chat' ));
 
 app.use('/login', express.static(__dirname + '/login' ));
 
+app.use('/chatbot', express.static(__dirname + '/chatbot' ));
+
 // app.get('/', (req, res) => {
 //     res.sendFile(__dirname +'/index.html');
 // });

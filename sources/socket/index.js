@@ -20,4 +20,14 @@ io.on('connection', (socket) => {
         //  On relaie le message vers tous les utilisateurs connectés
        io.emit('chat_message', msg);
     })
+
+    socket.on("chatbot_request", (msg) => {
+        //  On relaie le message vers tous les utilisateurs connectés
+       io.emit('chatbot_request', msg);
+    })
+
+    socket.on("chatbot_response", (msg) => {
+        //  On relaie le message vers tous les utilisateurs connectés
+       io.emit('chatbot_response', msg);
+    });
 });

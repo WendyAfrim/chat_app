@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css"/>
+    <style>
+        #messages-bot {
+            border: 0.1em solid black;
+            height: 90vh;
+        }
+
+        #messages-bot p {
+            margin: 0;
+            padding: 10px;
+        }
+
+        #messages-bot :nth-child(odd) {
+            background-color: #aaa;
+        }
+
+        form {
+            display: flex;
+        }
+
+        #name {
+            flex: 1;
+            padding: 10px;
+        }
+
+        #message {
+            flex: 5;
+            padding: 10px;
+        }
+
+        button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div id="messages-bot"></div>
+    <form>
+        <input type="text" id="message" placeholder="Entrez votre message">
+        <button>Envoyer</button>
+    </form>
+
+    <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
+    <script src="./index.js" type="module"></script>
+</body>
+</html>
