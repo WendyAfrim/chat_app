@@ -1,4 +1,6 @@
-    
+export let chatbot = () => {
+    let self = {};
+
     let helloIntent = {
         "name": "Bonjour",
         "Sentences": [
@@ -87,7 +89,12 @@
                 ]
     }
 
-    const getIntent = (msg) => {
+    self.init = (msg) => {
+        return self.runChatBot(msg);
+    }
+
+    self.getIntent = (msg) => {
+
         let msgLower = msg.toLowerCase();
         let intent = null;
         let intentList = [entretienIntent, infoVehiculeIntent, infoContactIntent, stopIntent, helloIntent];
@@ -111,6 +118,7 @@
             }
         }
 
+
         if (intent == null) {
             intent = {
                 "name": "Unknown",
@@ -120,11 +128,9 @@
         } 
         
         return intent;
-        
-        
     }
 
-    const getResponse = (intent) => {
+    self.getResponse = (intent) => {
         let response = null;
         switch (intent.name) {
             case "Entretien vehicule":
@@ -146,14 +152,20 @@
                 response = "Je n'ai pas compris votre demande";
                 break;
         }
+
+        return response;
+
+    }
+
+    self.runChatBot = (msg) => {
+
+        let intent = self.getIntent(msg);
+        let response = self.getResponse(intent);
         return response;
     }
 
-    const chatbot = (msg) => {
-        let intent = getIntent(msg);
-        let response = getResponse(intent);
-        return response;
-    }
+    return self;
+}
 
-
-export { chatbot };
+// chatbot().init(msg);
+// export { chatbot };
